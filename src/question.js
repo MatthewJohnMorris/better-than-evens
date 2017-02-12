@@ -17,7 +17,13 @@ function answerQuestion() {
   }
   var percentWon = Math.round(upperWon * 10000) / 100;
 
-  document.getElementById('answer').innerText = expWon + " " + dispWon + " " + Math.round(100*stdGames)/100 + " " + Math.round(100*stdWon)/100 + " " + Math.round(10000*erfWon)/10000 + " " + percentWon + "%";
+  document.getElementById('answer-total').innerText = numGames;
+  document.getElementById('answer-expected').innerText = expWon;
+  document.getElementById('answer-disp').innerText = dispWon;
+  document.getElementById('answer-stdev').innerText = (100*stdGames)/100;
+  document.getElementById('answer-stwon').innerText = (100*stdWon)/100;
+  document.getElementById('answer-erfwon').innerText = Math.round(10000*erfWon)/10000;
+  document.getElementById('answer-chance').innerText = percentWon + "%";
 }
 
 function erf(x) {
