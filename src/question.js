@@ -1,8 +1,8 @@
 
 function answerQuestion() {
-  var numGames = document.getElementById('input-num-games').value;
-
   var numWon = document.getElementById('input-num-won').value;
+  var numLost = document.getElementById('input-num-lost').value;
+  var numGames = Math.floor(numWon) + Math.floor(numLost);
 
   var stdGames = Math.sqrt(numGames) / 2;
   var expWon = numGames / 2;
