@@ -7,6 +7,18 @@
 
   <script type="text/javascript" src="../src/question.js"></script>
 
+  <h1>
+  How Likely Is This Result If Odds Are Even?
+  </h1>
+
+  <p>
+  Given the won/lost count, what are the chances we do at least this well if it's an even game?
+  </p>
+
+  <p>
+  Even game => a binomial distribution for K games, which we can approximate by N(mu, sigma) with mu = K/2 and sigma = sqrt(K)/2.
+  </p>
+
   <p>
   Games won: <input id="input-num-won" value="420"></input>
   </p>
@@ -17,12 +29,12 @@
   <a class="btn-blue" onclick="answerQuestion(); return false;">Answer Question</a> 
 
   <p>  Total: <a id="answer-total"></a></p>
-  <p>  Exp: <a id="answer-expected"></a></p>
-  <p>  Disp: <a id="answer-disp"></a></p>
-  <p>  StDev: <a id="answer-stdev"></a></p>
-  <p>  StWon: <a id="answer-stwon"></a></p>
-  <p>  ErfWon: <a id="answer-erfwon"></a></p>
-  <p>  Chance: <a id="answer-chance"></a></p>
+  <p>  Mu: <a id="answer-expected"></a></p>
+  <p>  Disp = (Won-Mu): <a id="answer-disp"></a></p>
+  <p>  Sigma: <a id="answer-stdev"></a></p>
+  <p>  Devs = Disp / Sigma: <a id="answer-stwon"></a></p>
+  <p>  P(x in [-abs(Devs), +abs(Devs)]: <a id="answer-erfwon"></a></p>
+  <p>  P(x > Devs): <a id="answer-chance"></a></p>
 
 </body>
 </html>
