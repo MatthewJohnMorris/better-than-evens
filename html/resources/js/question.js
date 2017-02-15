@@ -23,7 +23,9 @@ function answerQuestion() {
   document.getElementById('answer-stdev').innerText = Math.round(100*stdGames)/100;
   document.getElementById('answer-stwon').innerText = Math.round(100*stdWon)/100;
   document.getElementById('answer-erfwon').innerText = Math.round(10000*erfWon)/10000;
-  document.getElementById('answer-chance').innerText = percentWon + "%";
+  document.getElementById('answer-chance').innerText = percentWon;
+
+  addGraph(stdWon);
 }
 
 function erf(x) {

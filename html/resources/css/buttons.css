@@ -1,5 +1,14 @@
 /* http://css3buttongenerator.com/ */
 
+input[type=text], input[type=url], input[type=email], input[type=password], input[type=tel] {
+  -webkit-appearance: none; -moz-appearance: none;
+  /* display: block; */
+  margin: 0;
+  height: 24px;
+  line-height: 40px; font-size: 20px;
+  border: 1px solid #bbb;
+}
+
 .btn-blue {
   background: #3498db;
   background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
